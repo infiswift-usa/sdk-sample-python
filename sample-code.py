@@ -18,6 +18,6 @@ client = mqtt.Client(client_id)
 client.on_connect = on_connect
 client.on_message = on_message
 client.username_pw_set(username, password)
-client.connect("shimla-broker.infiswift.com")
+client.connect("shimla-broker.infiswift.tech", 8883)
 
 client.loop_forever()

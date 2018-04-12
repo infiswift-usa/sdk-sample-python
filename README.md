@@ -47,7 +47,7 @@ client = mqtt.Client(client_id)
 client.on_connect = on_connect
 client.on_message = on_message
 client.username_pw_set(username, password)
-client.connect("shimla-broker.infiswift.com")
+client.connect("shimla-broker.infiswift.tech")
 
 client.loop_forever()
 ```
@@ -93,10 +93,12 @@ client = mqtt.Client(client_id)
 client.on_connect = on_connect
 client.on_message = on_message
 client.username_pw_set(username, password)
-client.connect("shimla-broker.infiswift.com")
+client.connect("shimla-broker.infiswift.tech", 8883)
 ```
 
-The next few lines of code creates a client with the paramters and callbacks defined before and attempts to connect to the broker service. The URL for the broker service is provided in the admin portal as well.
+The next few lines of code creates a client with the paramters and callbacks defined before and attempts to connect to the broker service. The URL and port for the broker service is provided in the admin portal as well. It can be found by clicking the robot in the top right corner next to the user profile (see screenshot below).
+
+![how to find broker url](images/find-broker.png)
 
 ```python
 client.loop_forever()
